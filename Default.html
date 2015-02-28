@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title>MyMap</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false&libraries=places,geometry"></script>
     <script src="js/MarkerClusterer.js"></script>
     <script src="js/list.js"></script>
     <script src="js/Codepros.js"></script>
@@ -24,42 +24,37 @@
 <body>
     <button type="button" id="btnLocation" data-inline="true" class="ui-btn ui-icon-Location ui-shadow ui-corner-all ui-btn-icon-notext ">get location</button>
         <div data-role="page" id="default" >
-            <!--hiden button-->
-            
-
             <!--left panel-->
             <div data-role="panel" id="navpanel" data-display="overlay" data-theme="b">
-          
-<ul data-role="listview">
-    <li> <a href="#"id="btnGetDirection">Get Directions</a></li>
-
-    <li><a href="audi.html">Settings</a></li>
-    <li><a href="bmw.html">Help</a></li>
-    
-</ul>
-
-                <div data-role="main" class="ui-content">
-                   
-                </div>
+                <ul data-role="listview">
+                    <li> <a href="#"id="btnGetDirection">Get Directions</a></li>
+                    <li><a href="audi.html">Settings</a></li>
+                    <li><a href="bmw.html">Help</a></li>
+                </ul>
             </div>
             <!--header-->
             <div data-role="header" id="header">
-                <h1>
-                   3lyamen
-                </h1>
-                <!--nav panel-->
-                <a href="#navpanel" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext"></a>
-                <a  id="notificationLink" class="ui-btn ui-corner-all ui-icon-shop ui-btn-icon-notext"></a>
-                
+               <h1>3alymen</h1>
+               <a href="#navpanel" class="ui-btn ui-corner-all ui-icon-bars ui-btn-icon-notext"></a>
+               <div class="ui-btn-right">
+               <a id="notificationLink" class="ui-btn ui-corner-all ui-icon-shop ui-btn-icon-notext"></a>
+               <a  id="searchButton" class="ui-btn ui-corner-all ui-icon-search ui-btn-icon-notext"></a>
+               </div>
                 <div id="nav">
                     <div id="notificationContainer">
                         <div id="notificationTitle">Advertisements</div>
                         <div id="notificationsBody" class="notifications">
                         </div>
                         <div id="notificationFooter"><a href="#">See All</a></div>
+                    </div></div>
+                <div id="nav">
+                    <div id="notificationCo">
+                        <div id="notificationsBod" class="notifications">
+                            <input type="text" id="text-field" placeholder="Enter a Location" />
+                        </div>
                     </div>
-                </div>
-            </div>
+                </div> 
+                </div> 
             <div data-role="content" style="padding: 0;">
                 <div data-role="popup" id="popupDialogDireictionMethod2Point" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width: 250px;">
                     <div data-role="header" data-theme="a">

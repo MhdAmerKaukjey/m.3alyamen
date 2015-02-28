@@ -5,6 +5,18 @@
         zoom: 10,
         geocoder: true
     });
+    //search
+    var input = document.getElementById("text-field");
+    //myMap.PushControl(input,'top');
+    myMap.AutoComplete(input);
+    myMap._AttachEvents(myMap.gMap,[{
+            name:'click',
+            callback:function(e){
+                console.log(e.latLng.lat());
+                console.log(e.latLng.lng());
+                //alert("clicked");
+            }
+        }]);
     var marks = { point1Lat: "", point1Lng: "", point2Lat: "", point2Lng: "" }
     //get location btn and push to map
     var btnLocation = document.getElementById("btnLocation");
